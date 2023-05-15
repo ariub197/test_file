@@ -1,0 +1,7 @@
+.u-hover {
+	transition: all 0.2s;
+	&:hover {
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}

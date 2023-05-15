@@ -1,0 +1,18 @@
+.c-nav-button {
+	display: block;
+	border-radius: 7px;
+	color: $accent-color;
+	border: solid 1px $accent-color;
+	padding: rem(16);
+	text-align: center;
+	@include font(14, 17);
+	margin: auto rem(15) rem(40);
+	text-decoration: none;
+	transition: all 0.2s;
+	&:hover {
+		@include pc {
+			background-color: $accent-color;;
+			color: #fff;
+		}
+	}
+}

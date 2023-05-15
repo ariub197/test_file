@@ -1,0 +1,51 @@
+
+
+@mixin pc {
+	@media screen and (min-width: ($breakpoint) * 1px) {
+		@content;
+	}
+}
+
+@mixin tab {
+	@media screen and (max-width: ($breakpoint) * 1px - 1) {
+		@content;
+	}
+}
+
+@mixin sp {
+	@media screen and (max-width: ($breakpoint2) * 1px - 1) {
+		@content;
+	}
+}
+
+// pc font size
+@mixin font($size: 10, $height: 10, $spcing: 0, $weight: 900) {
+	font-size: ($size / 10 * 1rem);
+	line-height: ($height / $size);
+	letter-spacing: ($spcing / 1000 * 1em);
+	font-weight: $weight;
+}
+
+// sp font size
+@mixin font-sp($size: 10, $height: 10, $spcing: 0, $weight: 300) {
+	@include tab {
+		font-size: calc((#{$size} / #{$sp-artboard}) * 100vw);
+		line-height: ($height / $size);
+		letter-spacing: ($spcing / 1000 * 1em);
+		font-weight: $weight;
+	}
+}
+
+// rem
+@function rem($arg) {
+	$value: $arg;
+	@return $value / 10 * 1rem;
+}
+
+// vw
+@function vw($arg) {
+	$value: 0;
+	$value: $arg / $sp-artboard;
+	@return $value * 100vw;
+}
+

@@ -1,0 +1,13 @@
+/* color
+----------------------------------------------------------------- */
+.u-color {
+  &--base {
+    color: $base-color;
+  }
+	&--second {
+    color: $second-color;
+  }
+	&--accent {
+    color: $accent-color;
+  }
+}

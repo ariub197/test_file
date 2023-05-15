@@ -1,0 +1,43 @@
+
+/* position
+----------------------------------------------------------------- */
+.u-posi-relative {
+	position: relative;
+	&--pc {
+		@include pc {
+			position: relative;
+		}
+	}
+	&--sp {
+		@include tab {
+			position: relative;
+		}
+	}
+}
+
+.u-posi-absolute {
+	position: absolute;
+	&--pc {
+		@include pc {
+			position: absolute;
+		}
+	}
+	&--sp {
+		@include tab {
+			position: absolute;
+		}
+	}
+}
+.u-posi-fixed {
+	position: fixed;
+	&--pc {
+		@include pc {
+			position: fixed;
+		}
+	}
+	&--sp {
+		@include tab {
+			position: fixed;
+		}
+	}
+}

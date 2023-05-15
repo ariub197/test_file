@@ -1,0 +1,48 @@
+
+/* display
+----------------------------------------------------------------- */
+.u-disp-block {
+  display: block;
+	&--pc {
+		@include tab {
+			display: none;
+		}
+	}
+	&--sp {
+		@include pc {
+			display: none;
+		}
+	}
+}
+
+.u-disp-flex {
+  display: flex;
+	&--pc {
+		@include pc {
+			display: flex;
+		}
+	}
+	&--sp {
+		@include tab {
+			display: flex;
+		}
+	}
+}
+
+.u-disp-none {
+  display: none;
+	&--pc {
+		@include pc {
+			display: none;
+		}
+	}
+	&--sp {
+		@include tab {
+			display: none;
+		}
+	}
+}
+
+.u-disp-contnts {
+  display: contents;
+}

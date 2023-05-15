@@ -1,0 +1,17 @@
+.main {
+	flex: 1;
+	padding: rem(50) rem(70);
+	@include tab {
+		padding: rem(90) rem(20) rem(50);
+	}
+}
+
+.main-head__title {
+	@include font(21, 25, 0, 900);
+	margin-bottom: rem(4);
+}
+
+.main-head__desc {
+	color: #A5C9FF;
+	@include font(14, 17, 0, 400);
+}

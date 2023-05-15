@@ -1,0 +1,43 @@
+
+/* font
+----------------------------------------------------------------- */
+.u-font {
+  &--normal {
+    font-weight: normal;
+  }
+  &--medium {
+    font-weight: bold;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &--wrap {
+    white-space: normal;
+  }
+
+	&--lato {
+		font-family: $base-font-family;
+	}
+}

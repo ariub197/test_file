@@ -1,0 +1,74 @@
+@for $i from 0 through 100 {
+	.u-mb-#{$i} {
+		margin-bottom: $i / 10 + rem;
+	}
+	.u-mt-#{$i} {
+		margin-top: $i / 10 + rem;
+	}
+	.u-ml-#{$i} {
+		margin-left: $i / 10 + rem;
+	}
+	.u-mr-#{$i} {
+		margin-right: $i / 10 + rem;
+	}
+}
+
+@for $i from 0 through 100 {
+	@include tab {
+		.u-mb-sp-#{$i} {
+			margin-bottom: $i + vw;
+		}
+		.u-mt-sp-#{$i} {
+			margin-top: $i + vw;
+		}
+		.u-ml-sp-#{$i} {
+			margin-left: $i + vw;
+		}
+		.u-mr-sp-#{$i} {
+			margin-right: $i + vw;
+		}
+	}
+}
+
+.ml-auto {
+	margin-left: auto;
+	&--pc {
+		@include pc {
+			margin-left: auto;
+		}
+	}
+	&--sp {
+		@include tab {
+			margin-left: auto;
+		}
+	}
+}
+.u-mr-auto {
+	margin-right: auto;
+	&--pc {
+		@include pc {
+			margin-right: auto;
+		}
+	}
+	&--sp {
+		@include tab {
+			margin-right: auto;
+		}
+	}
+}
+.u-mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+	&--pc {
+		@include pc {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&--sp {
+		@include tab {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

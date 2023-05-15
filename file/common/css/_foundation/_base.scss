@@ -1,0 +1,12 @@
+html {
+	font-size: 62.5%;
+	@include sp {
+		font-size: 2.3vw;
+	}
+}
+body {
+	font-family: $base-font-family;
+	color: $base-color;
+	background-color: $second-color;
+	@include font(15, 20, 20, 400);
+}

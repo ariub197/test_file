@@ -1,0 +1,30 @@
+.c-select-area {
+	position: relative;
+	select {
+		border: none;
+		appearance: none;
+		height: 100%;
+		background: none;
+		@include font(16, 19, 0, 600);
+		padding-right: rem(30);
+		color: $base-color;
+		transition: all 0.2s;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 45%;
+		right: 0;
+		width: rem(10);
+		height: rem(10);
+		border-right: solid 2px #000000;
+		border-bottom: solid 2px #000000;
+		transform: translateY(-50%) rotate(45deg);
+	}
+}

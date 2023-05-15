@@ -1,0 +1,44 @@
+
+/* align
+----------------------------------------------------------------- */
+.u-textalign-center {
+	text-align: center;
+	&--pc {
+		@include pc {
+			text-align: center;
+		}
+	}
+	&--sp {
+		@include tab {
+			text-align: center;
+		}
+	}
+}
+
+.u-textalign-right {
+	text-align: right;
+	&--pc {
+		@include pc {
+			text-align: right;
+		}
+	}
+	&--sp {
+		@include tab {
+			text-align: right;
+		}
+	}
+}
+
+.u-textalign-right {
+	text-align: left;
+	&--pc {
+		@include pc {
+			text-align: left;
+		}
+	}
+	&--sp {
+		@include tab {
+			text-align: left;
+		}
+	}
+}

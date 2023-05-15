@@ -1,0 +1,31 @@
+@for $i from 0 through 100 {
+	.u-pb-#{$i} {
+		padding-bottom: $i / 10 + rem;
+	}
+	.u-pt-#{$i} {
+		padding-top: $i / 10 + rem;
+	}
+	.u-pl-#{$i} {
+		padding-left: $i / 10 + rem;
+	}
+	.u-pr-#{$i} {
+		padding-right: $i / 10 + rem;
+	}
+}
+
+@for $i from 0 through 100 {
+	@include tab {
+		.u-pb-sp-#{$i} {
+			padding-bottom: $i + vw;
+		}
+		.u-pt-sp-#{$i} {
+			padding-top: $i + vw;
+		}
+		.u-pl-sp-#{$i} {
+			padding-left: $i + vw;
+		}
+		.u-pr-sp-#{$i} {
+			padding-right: $i + vw;
+		}
+	}
+}

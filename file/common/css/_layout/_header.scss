@@ -1,0 +1,159 @@
+.header {
+	position: relative;
+	background-color: #fff;
+	padding: rem(12) rem(25);
+	display: flex;
+	border-bottom: solid 1px #A5C9FF;
+	align-items: center;
+	@include tab {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-left: rem(30);
+	}
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.header-nav-item {
+	margin: 0 rem(9);
+	position: relative;
+}
+
+.header-nav-link {
+	display: block;
+	width: rem(30);
+	height: rem(30);
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.header-nav-link__num {
+	position: absolute;
+	top: rem(-2);
+	right: rem(-10);
+	color: #fff;
+	background-color: #FF8181;
+	@include font(8, 10, 0, 600);
+	padding: rem(1) rem(6);
+	border-radius: 30px;
+}
+
+.header-user {
+	margin-left: rem(10);
+	a {
+		display: block;
+		width: rem(40);
+		height: rem(40);
+	}
+}
+.header-news {
+	position: absolute;
+	top: 150%;
+	right: 0;
+	background-color: #fff;
+	width: rem(300);
+	border: solid 1px #A5C9FF;
+	border-radius: 7px;
+	box-shadow: 0 3px 16px rgba(10, 75, 109, 0.08);
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.2s;
+	@include sp {
+		right: rem(-20);
+	}
+	&.active {
+		opacity: 1;
+		z-index: 1000;
+	}
+}
+.header-news__item {
+	position: relative;
+	&:not(:first-child) {
+		border-top: solid 1px #A5C9FF;
+	}
+}
+.header-news__link {
+	display: block;
+	color: $base-color;
+	padding: rem(10);
+	@include font(14, 20, 0, 600);
+	text-decoration: none;
+	transition: all 0.2s;
+	&:hover {
+		@include pc {
+			background-color: #FAFDFF;
+		}
+	}
+}
+.header-news__date {
+	display: block;
+}
+.header-news__title {
+	display: block;
+}
+
+.header-comment {
+	position: absolute;
+	top: 150%;
+	right: 0;
+	background-color: #fff;
+	width: rem(300);
+	border: solid 1px #A5C9FF;
+	border-radius: 7px;
+	box-shadow: 0 3px 16px rgba(10, 75, 109, 0.08);
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.2s;
+	@include sp {
+		right: rem(-100);
+	}
+	&.active {
+		opacity: 1;
+		z-index: 1000;
+	}
+}
+.header-comment__item {
+	position: relative;
+	&:not(:first-child) {
+		border-top: solid 1px #A5C9FF;
+	}
+}
+.header-comment__link {
+	display: block;
+	color: $base-color;
+	padding: rem(10);
+	text-decoration: none;
+	transition: all 0.2s;
+	align-items: center;
+	&:hover {
+		@include pc {
+			background-color: #FAFDFF;
+		}
+	}
+}
+.header-comment__icon {
+	width: rem(35);
+	height: rem(35);
+	margin-right: rem(10)
+}
+
+.header-comment__contents {
+	flex: 1
+}
+
+.header-comment__title {
+	@include font(16, 20, 0, 600);
+}
+
+.header-comment__text {
+	@include font(14, 20, 0, 600);
+}
