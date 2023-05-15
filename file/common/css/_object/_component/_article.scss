@@ -1,0 +1,16 @@
+.employees {
+  width: 100%;
+  padding: rem(0) rem(70);
+  @include tab {
+		padding: rem(0) rem(20);
+	}
+}
+
+.c-employees {
+  border: 1px solid #A5C9FF;
+  border-radius: 7px 7px 0px 0px;
+  box-shadow: 0px 3px 16px #0A4B6D14;
+  background: #fff;
+  width: 100%;
+  max-width: 1032px;
+}

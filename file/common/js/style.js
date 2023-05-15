@@ -89,3 +89,21 @@ window.addEventListener("DOMContentLoaded", function() {
 		document.querySelector(".nav").classList.remove("active");
 	}
 })
+
+//追記
+$(function(){
+  $(document).ready(function() {
+
+    $('table tr').click(function() {
+      let $c = $(this).children('td').children('input[type=checkbox]');
+        if($c.prop('checked'))
+            $c.prop('checked', '');
+        else
+            $c.prop('checked', 'checked');
+    });
+
+    $('#checkAll').change(function() {
+      $('.c-check').prop('checked', $(this).prop('checked'));
+    });
+  });
+})

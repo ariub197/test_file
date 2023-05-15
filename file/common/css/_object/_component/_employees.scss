@@ -1,0 +1,219 @@
+.c-employees-header {
+  display: flex;
+  padding: 20px 23px 13px;
+  align-items: center;
+  &__title {
+    @include font(16, 19, 0, 700);
+  }
+  &__add {
+    display: flex;
+    margin-left: auto;
+  }
+
+  @include sp {
+    padding: 8px 12px 10px;
+  }
+}
+
+.c-employees-nav {
+  padding-left: 23px;
+  @include sp {
+    padding-left: 0;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+
+    @include sp {
+      justify-content: center;
+    }
+
+    li + li {
+      margin-left: 30px;
+    }
+  }
+
+  &__item {
+    @include font(14, 17, 0, 700);
+  }
+}
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-top:1px solid $line-color;
+  padding: 0 23px;
+  margin-top: 12px;
+
+  @include tab {
+
+  }
+
+  tr td,
+  tr th {
+    @include font(14, 17, 0, 500);
+    padding: 11px 0 11px 18px;
+    align-items: center;
+    text-align: left;
+
+    @include tab {
+      padding: 11px 0 11px 5px;
+    }
+  }
+
+  tr th {
+    padding: 10px 0 12px 18px;
+
+    @include tab {
+      padding: 15px 0 8px 5px;
+    }
+  }
+
+  tr {
+    cursor: pointer;
+    border-top:1px solid $line-color;
+  }
+
+  th span{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 10px;
+      width: 10px;
+      right: -14px;
+      border-bottom: 2px solid $title-color-green;
+      border-left: 2px solid $title-color-green;
+      transform: translate(30%, 50%) rotate(-45deg);
+      @include sp {
+        border-bottom: 1.5px solid $title-color-green;
+        border-left: 1.5px solid $title-color-green;
+        height: 8px;
+        width: 8px;
+        right: -8px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 2px;
+      right: -14px;
+      background: #AAFFBE;
+      transform: translate(-50%, 0);
+      @include sp {
+        height: 12px;
+        right: -8.1px;
+        width: 1.5px;
+      }
+    }
+  }
+
+  th:nth-child(5),
+  td:nth-child(5) {
+    @include sp {
+      display: none;
+    }
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-right: 70px;
+    @include tab {
+      padding-right: 10px;
+    }
+  }
+
+  &--height td:not(:first-child) {
+    padding: 20px 0 9px 18px!important;
+    @include tab {
+      padding: 20px 0 9px 5px!important;
+    }
+  }
+
+  //チェックボックスのデザイン
+  &__checkbox {
+    width: 17px;
+    height: 17px;
+    [type=checkbox] {
+      position: relative;
+      appearance: none;
+      left: 8px;
+      width: inherit;
+      height: inherit;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background: #fff;
+        border: 1px solid $line-color;
+        border-radius: 3px;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+      &:checked::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 14px;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -60%) rotate(45deg);
+        border-right: 2px solid $base-color;
+        border-bottom: 2px solid $base-color;
+      }
+    }
+  }
+  //title背景色の色
+  &__titleBox{
+    width: 141px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 7px;
+
+    @include tab {
+      width: 78px;
+      height: auto;
+      line-height: 18px;
+      padding: 8px 5px;
+      border-radius: 3px;
+    }
+
+    &--green {
+      background: $title-color-green;
+    }
+    &--yellow {
+      background: $title-color-yellow;
+    }
+  }
+  &__name {
+    display: flex;
+
+    @include tab {
+      display: block;
+    }
+  }
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $line-color;
+    margin-right: 20px;
+  }
+
+  tr:hover:not(:first-child) {
+    background: $line-color;
+    color: #fff;
+  }
+}

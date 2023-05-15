@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="common/css/style.css">
+	<link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="common/css/style.css"> -->
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -170,10 +172,61 @@
 			</div>
 
 			<!-- ここに記載してください。-->
+			<article class="employees">
+				<div class="c-employees">
+					<div class="c-employees-header">
+						<h2 class="c-employees-header__title">Employees (17)</h2>
+						<div class="c-employees-header__add">
+							<a href="#" class="c-button">Add New</a>
+							<a href="#" class="c-add-setting"><i class="fa-solid fa-gear"></i></a>
+						</div>
+					</div>
+					<div class="c-employees-nav">
+						<ul class="c-employees-nav__items">
+							<li><a href="#" class="c-employees-nav__item u-hover">Delete</a></li>
+							<li><a href="#" class="c-employees-nav__item u-hover">Print</a></li>
+							<li><a href="#" class="c-employees-nav__item u-hover">Export</a></li>
+							<li><a href="#" class="c-employees-nav__item u-hover">Make Manager</a></li>
+						</ul>
+					</div>
+					<table class="c-table">
+						<tr>
+							<th class="c-table__checkbox"><input type="checkbox" id="checkAll"></th>
+							<th><a href="#"><span>Name</span></a></th>
+							<th><a href="#"><span>Email</span></a></th>
+							<th><a href="#"><span>Title</span></a></th>
+							<th><a href="#"><span>Date Modified</span></a></th>
+							<th><a href="#"><span>Dundies</span></a></th>
+						</tr>
+						<tr class="c-table--height">
+							<td class="c-table__checkbox"><input type="checkbox" class="c-check"></td>
+							<td class="c-table__name"><img src="./common/img/unknown_1.jpg" alt="img" class="c-table__img"><p>Michael <br class="is-tab">Scott</p></td>
+							<td class="c-table__email">marshall<br class="is-tab">@yahoo.com</td>
+							<td class="c-table__title"><p class="c-table__titleBox c-table__titleBox--green">Regional <br class="is-tab">Manager</p></td>
+							<td class="c-table__date">07/04/1927</td>
+							<td class="c-table__dundies">16</td>
+						</tr>
+						<tr>
+							<td class="c-table__checkbox"><input type="checkbox" class="c-check"></td>
+							<td class="c-table__name"><img src="./common/img/unknown_1.jpg" alt="img" class="c-table__img"><p>Jim <br class="is-tab">Halpert</p></td>
+							<td class="c-table__email">miles<br class="is-tab">@mail.com</td>
+							<td class="c-table__title"><p class="c-table__titleBox c-table__titleBox--yellow">Salesman</p></td>
+							<td class="c-table__date">08/08/1921</td>
+							<td class="c-table__dundies">11</td>
+						</tr>
+					</table>
+				</div>
+				<div class="c-pagination">
+					<div class="c-pagination__item is-active"><a href="#">1</a></div>
+					<div class="c-pagination__item"><a href="#">2</a></div>
+				</div>
+			</article>
+
 
 			<!-- ここに記載してください。-->
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="common/js/style.js"></script>
 </body>
 </html>

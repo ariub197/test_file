@@ -1,0 +1,70 @@
+.c-button {
+  display: block;
+  position: relative;
+  border: 1px solid $base-color;
+  border-radius: 7px;
+  text-align: center;
+  @include font(14, 17, 0, 500);
+  width: 127px;
+  height: 32px;
+  line-height: 28px;
+  padding-right: 25px;
+  background: #fff;
+
+  @include sp {
+    width: 98px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 46%;
+    right: 27px;
+    width: 1px;
+    height: 13px;
+    background: $base-color;
+    transform: translate(-50%, -50%);
+
+    @include sp {
+      right: 17px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top:45%;
+    right: 15px;
+    width: 13px;
+    height: 1px;
+    background: $base-color;
+    transform: translate(-50%, -50%);
+    @include sp {
+      right: 5px;
+    }
+  }
+
+  &:hover {
+    background: $base-color;
+    transition: all 0.2s;
+    color: #fff;
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+
+.c-add-setting {
+  margin-left: 20px;
+  i {
+    line-height: 32px;
+    color: #C7C8C9;
+    &:hover {
+      transition: all 0.2s;
+      color: $base-color;
+    }
+  }
+  @include sp {
+    margin-left: 5px;
+  }
+}

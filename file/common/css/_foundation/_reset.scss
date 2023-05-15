@@ -56,3 +56,9 @@ meter {
 :where([draggable="true"]) {
 	-webkit-user-drag: element;
 }
+
+//追記
+a {
+	text-decoration: none;
+	color: $base-color;
+}

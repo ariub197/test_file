@@ -1,0 +1,33 @@
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 27px;
+  width: 1030px;
+  max-width: 100%;
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 3px 6px #0A4B6D14;
+    text-align: center;
+    a {
+      width: inherit;
+      height: inherit;
+      color: #C7C8C9;
+      line-height: 28px;
+      padding: 8px;
+    }
+    & + & {
+      margin-left: 10px;
+    }
+    &.is-active,
+    &:hover {
+      border: 1px solid $line-color;
+      a {
+        color: $line-color;
+      }
+    }
+  }
+}
